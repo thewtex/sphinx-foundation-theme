@@ -1,4 +1,5 @@
-sphinx-foundation-theme
+=======================
+Sphinx Foundation Theme
 =======================
 
 A `Sphinx <http://www.sphinx-doc.org/>`_ documentation generator theme that

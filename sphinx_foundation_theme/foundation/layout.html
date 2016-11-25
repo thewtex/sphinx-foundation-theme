@@ -1,5 +1,9 @@
 {% extends "basic/layout.html" %}
 
+{%- block doctype -%}
+<!DOCTYPE html>
+{%- endblock %}
+
 {% set css_files = css_files + [ '_static/' + theme_stylesheet ] %}
 
 {% set script_files = script_files + [ '_static/what-input/what-input.min.js',

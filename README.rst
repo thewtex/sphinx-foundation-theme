@@ -21,6 +21,16 @@ Foundation is
 - A fairly complete set of web page and user interface components
 - Open source
 
+Sphinx has
+
+- Wide adoption in the scientific computing community
+- Separation of content and style
+- Support for equations
+- Output in many formats
+- Powerful indexing and cross referencing
+- Extensibility
+- An active open source community
+
 
 Inspired by
 -----------

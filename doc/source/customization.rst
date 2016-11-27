@@ -29,7 +29,9 @@ can be changed to a `style that matches your theme <https://help.farbox.com/pygm
 Sidebars
 --------
 
-.. todo:: Sidebar contents
+Sidebar Contents
+^^^^^^^^^^^^^^^^
+
 By default, the sidebar is emtpy. Add sidebar contents by populating the
 *conf.py* `html_sidebars
 <http://www.sphinx-doc.org/en/1.4.9/config.html?highlight=html_sidebars>`_ option.
@@ -43,4 +45,10 @@ For example::
           'globaltoc.html']
       }
 
-.. todo:: Sidebar location
+Sidebar Location
+^^^^^^^^^^^^^^^^
+
+To move the sidebar to the right, set the ``rightsidebar`` boolean in
+*conf.py*::
+
+  html_theme_options = { 'rightsidebar' : 'true' }

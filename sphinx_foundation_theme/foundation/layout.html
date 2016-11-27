@@ -30,7 +30,9 @@
 
 {%- block content %}
 <div class="row">
-  {%- block sidebar1 %}{{ foundation_sidebar() }}{% endblock %}
+  {%- block sidebar1 %}
+  {%- if not theme_rightsidebar|tobool %}{{ foundation_sidebar() }}{%- endif %}
+  {%- endblock %}
 
   {%- block document %}
     <div id="content" class="small-8 large-9 columns">
@@ -38,7 +40,9 @@
     </div>
   {%- endblock %}
 
-  {%- block sidebar2 %} {# possible location for sidebar #} {% endblock %}
+  {%- block sidebar2 %}
+  {%- if theme_rightsidebar|tobool %}{{ foundation_sidebar() }}{%- endif %}
+  {%- endblock %}
 </div>
 {%- endblock %}
 

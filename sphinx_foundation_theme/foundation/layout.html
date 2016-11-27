@@ -11,7 +11,11 @@
 {% set script_files = script_files + [ '_static/what-input/what-input.min.js',
   '_static/foundation-sites/foundation.min.js' ] %}
 
-{%- block relbar1 %}<div class="row column">{{ super() }}</div>{% endblock %}
+{%- macro topBar() %}
+{% include "topbar.html" %}
+{%- endmacro %}
+
+{%- block relbar1 %}{% endblock %}
 
 {%- macro foundation_sidebar() %}
   {%- if render_sidebar %}
@@ -31,6 +35,7 @@
 {%- endmacro %}
 
 {%- block content %}
+{{ topBar() }}
 <div class="row">
   {%- block sidebar1 %}
   {%- if not theme_rightsidebar|tobool %}{{ foundation_sidebar() }}{%- endif %}
@@ -51,7 +56,7 @@
 {%- block relbar2 %}<div class="row column">{{ super() }}</div>{% endblock %}
 
 {%- block footer %}
-<div class="row column">
+<div class="top-bar row column">
 {{ super() }}
 </div>
     <script> $(document).foundation() </script>

@@ -11,6 +11,8 @@
 {% set script_files = script_files + [ '_static/what-input/what-input.min.js',
   '_static/foundation-sites/foundation.min.js' ] %}
 
+{%- block relbar1 %}<div class="row column">{{ super() }}</div>{% endblock %}
+
 {%- macro foundation_sidebar() %}
   {%- if render_sidebar %}
   <div class="small-4 large-3 columns" id="sidebar">
@@ -45,6 +47,8 @@
   {%- endblock %}
 </div>
 {%- endblock %}
+
+{%- block relbar2 %}<div class="row column">{{ super() }}</div>{% endblock %}
 
 {%- block footer %}
 <div class="row column">

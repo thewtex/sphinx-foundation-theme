@@ -30,5 +30,17 @@ Sidebars
 --------
 
 .. todo:: Sidebar contents
+By default, the sidebar is emtpy. Add sidebar contents by populating the
+*conf.py* `html_sidebars
+<http://www.sphinx-doc.org/en/1.4.9/config.html?highlight=html_sidebars>`_ option.
+For example::
+
+  # Custom sidebar templates, maps document names to template names.
+  html_sidebars = {'**': ['localtoc.html',
+          'relations.html',
+          'sourcelink.html'],
+      'index': [
+          'globaltoc.html']
+      }
 
 .. todo:: Sidebar location

@@ -54,6 +54,13 @@ contents. To disable this menu altogether, set the ``topbar_page`` option to
 The name of the topbar page menu is *Page* by default. To change it, set the
 ``topbar_page_name`` option.
 
+Topbar Relations
+^^^^^^^^^^^^^^^^
+
+Be default, links to the previous and next pages are included by default on
+the right side of the topbar. To disable these link, set the
+``topbar_relations`` option to ``False``.
+
 
 Sidebars
 --------

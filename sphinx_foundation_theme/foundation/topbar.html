@@ -36,7 +36,25 @@
   {%- endblock %}
   {%- block topbarright %}
   <div class="top-bar-right">
-    <ul class="menu">
+    <ul class="menu sphinx-top-bar" data-responsive-menu="drilldown medium-dropdown">
+      {%- if theme_topbar_relations %}
+      {%- block topbar_relations %}
+      {%- if prev %}
+        <li class="pagination-previous">
+          <a href="{{ prev.link|e }}" title="{{ _('Previous Topic: ') + prev.title|striptags }}">
+            <span class="show-for-large">{{ prev.title|striptags|truncate(length=16, killwords=True) }}</span>
+          </a>
+        </li>
+      {%- endif %}
+      {%- if next %}
+        <li class="pagination-next">
+          <a href="{{ next.link|e }}" title="{{ _('Next Topic: ') + next.title|striptags }}">
+            <span class="show-for-large">{{ next.title|striptags|truncate(length=16, killwords=True) }}</span>
+          </a>
+        </li>
+      {%- endif %}
+      {%- endblock %}
+      {%- endif %}
       {%- block topbarsearch %}
         {%- if pagename != "search" %}
         <li><form action="{{ pathto('search') }}" method="get">

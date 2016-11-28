@@ -16,9 +16,7 @@
 {% include "topbar.html" %}
 {%- endmacro %}
 
-{%- block relbar1 %}{% endblock %}
-
-{%- macro foundation_sidebar() %}
+{%- macro foundationSidebar() %}
   {%- if render_sidebar %}
   <div class="small-4 large-3 columns" id="sidebar">
     {%- block sidebarlogo %}
@@ -35,11 +33,42 @@
   {%- endif %}
 {%- endmacro %}
 
+{%- macro foundationRelationBar() %}
+<div class="row">
+  <div class="small-8 large-9 columns">
+    <nav class="related" role="navigation" aria-label="related navigation">
+      <ul class="breadcrumbs">
+        {%- block rootrellink %}
+        <li class="nav-item nav-item-0"><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a></li>
+        {%- endblock %}
+        {%- for parent in parents %}
+          <li class="nav-item nav-item-{{ loop.index }}"><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a></li>
+        {%- endfor %}
+        {%- block relbaritems %} {% endblock %}
+      </ul>
+    </nav>
+  </div>
+  <div class="small-4 large-3 columns">
+    <ul class="pagination" role="navigation" aria-label="Pagination">
+      {%- for rellink in rellinks %}
+      <li {% if loop.first %}style="margin-right: 10px"{% endif %}>
+        <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}"
+           {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
+        </li>
+      {%- if not loop.first and not loop.last %}<li aria-hidden="true">{{ reldelim2 }}</li>{% endif %}
+      {%- endfor %}
+    </ul>
+  </div>
+</div>
+{%- endmacro %}
+
+{%- block relbar1 %}{% endblock %}
+
 {%- block content %}
 {{ topBar() }}
 <div class="row">
   {%- block sidebar1 %}
-  {%- if not theme_rightsidebar|tobool %}{{ foundation_sidebar() }}{%- endif %}
+  {%- if not theme_rightsidebar|tobool %}{{ foundationSidebar() }}{%- endif %}
   {%- endblock %}
 
   {%- block document %}
@@ -49,12 +78,12 @@
   {%- endblock %}
 
   {%- block sidebar2 %}
-  {%- if theme_rightsidebar|tobool %}{{ foundation_sidebar() }}{%- endif %}
+  {%- if theme_rightsidebar|tobool %}{{ foundationSidebar() }}{%- endif %}
   {%- endblock %}
 </div>
 {%- endblock %}
 
-{%- block relbar2 %}<div class="row column">{{ super() }}</div>{% endblock %}
+{%- block relbar2 %}{{ foundationRelationBar() }}{% endblock %}
 
 {%- block footer %}
 <div class="top-bar row column">

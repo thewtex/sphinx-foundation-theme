@@ -14,6 +14,7 @@ test:
   override:
     - flit wheel
     - pip install dist/sphinx_foundation_theme*.whl
+    - cp dist/sphinx_foundation_theme*.whl $CIRCLE_ARTIFACTS/
     - cd doc && make html && cd build/html && git add * && git commit -m "Build on $(date) of $(cd ..; git rev-parse --short HEAD)"
 
 deployment:

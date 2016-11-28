@@ -2,6 +2,12 @@
 Sphinx Foundation Theme
 =======================
 
+.. image:: https://img.shields.io/pypi/v/sphinx-foundation-theme.svg?maxAge=2592000
+    :target: https://pypi.python.org/pypi/sphinx-foundation-theme
+
+.. image:: https://img.shields.io/pypi/dm/sphinx-foundation-theme.svg?maxAge=2592000
+    :target: https://pypi.python.org/pypi/sphinx-foundation-theme
+
 A `Sphinx <http://www.sphinx-doc.org/>`_ documentation generator theme that
 uses `Zurb <http://foundation.zurb.com/>`_
 `foundation-sites <http://foundation.zurb.com/sites.html>`_ CSS / JavaScript

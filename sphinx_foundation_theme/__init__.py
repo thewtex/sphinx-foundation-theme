@@ -1,7 +1,4 @@
-"""Sphinx Foundation Theme
-
-A Sphinx HTML theme that uses Zurb foundation-sites.
-"""
+"""A Sphinx HTML theme that uses Zurb foundation-sites."""
 
 __version__ = '0.5.0'
 

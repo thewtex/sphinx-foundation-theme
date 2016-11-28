@@ -38,6 +38,13 @@ Sphinx has
 - An active open source community
 
 
+Documentation
+-------------
+
+For more information and an example, see the `project documentation
+<https://thewtex.github.io/sphinx-foundation-theme/>`_.
+
+
 Inspired by
 -----------
 

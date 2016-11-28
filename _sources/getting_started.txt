@@ -20,4 +20,4 @@ In your project's Sphinx *conf.py* file, set the theme to ``foundation``::
 
     html_theme_path = sphinx_foundation_theme.get_html_theme_path()
 
-To modify the appearance, see the theme :ref:`customization` documentation.
+To modify its appearance, see the theme's :ref:`customization` documentation.

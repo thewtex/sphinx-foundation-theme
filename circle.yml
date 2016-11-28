@@ -7,8 +7,17 @@ dependencies:
     - pip install --upgrade pip
     - pip install flit
     - pip install sphinx
+    - git clone -b gh-pages git@github.com:thewtex/sphinx-foundation-theme doc/build/html
+    - cd doc/build/html && git config user.name CircleCI && git config user.email "matt.mccormick@kitware.com"
 
 test:
   override:
     - flit wheel
     - pip install dist/sphinx_foundation_theme*.whl
+    - cd doc && make html && cd build/html && git add * && git commit -m "Build on $(date) of $(cd ..; git rev-parse --short HEAD)"
+
+deployment:
+  documentation:
+    branch: master
+    commands:
+      - cd doc/build/html && git push origin gh-pages

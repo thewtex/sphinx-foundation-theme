@@ -8,8 +8,8 @@ Sphinx Foundation Theme
 .. image:: https://img.shields.io/pypi/dm/sphinx-foundation-theme.svg?maxAge=2592000
     :target: https://pypi.python.org/pypi/sphinx-foundation-theme
 
-.. image:: https://img.shields.io/circleci/project/github/thewtex/sphinx-foundation-theme.svg
-    :target: https://circleci.com/gh/thewtex/sphinx-foundation-theme
+.. image:: https://img.shields.io/circleci/project/github/thewtex/sphinx-foundation-theme/master.svg
+    :target: https://circleci.com/gh/thewtex/sphinx-foundation-theme/tree/master
 
 .. image:: https://img.shields.io/github/stars/thewtex/sphinx-foundation-theme.svg?style=social&label=Star
     :target: https://github.com/thewtex/sphinx-foundation-theme

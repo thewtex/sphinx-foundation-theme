@@ -26,6 +26,21 @@ The `pygments_style
 can be changed to a `style that matches your theme <https://help.farbox.com/pygments.html>`_.
 
 
+Topbar
+------
+
+A responsive `topbar <http://foundation.zurb.com/sites/docs/top-bar.html>`_ is included
+to provide an overview and assist navigation.
+
+The topbar includes a menu to navigate the site. The name of this menu is
+*Site* by default. To change it, set the ``topbar_site_name``
+option::
+
+  html_theme_options = { 'topbar_site_name' : 'Site Navigation' }
+
+To adjust the number of levels in the topbar site menu, set the
+``topbar_site_depth`` option. The default value, *-1*, shows all levels.
+
 Sidebars
 --------
 

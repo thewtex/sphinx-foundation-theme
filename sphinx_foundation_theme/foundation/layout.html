@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 {%- endblock %}
 
-{% set css_files = css_files + [ '_static/' + theme_stylesheet ] %}
+{% set css_files = css_files + [ '_static/' + theme_stylesheet,
+    '_static/foundation-sphinx.css' ] %}
 
 {%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and sidebars %}
 

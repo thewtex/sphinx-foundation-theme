@@ -3,19 +3,20 @@
 <div class="top-bar">
   {%- block topbarleft %}
   <div class="top-bar-left">
-    <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+    <ul class="menu sphinx-top-bar" data-responsive-menu="drilldown medium-dropdown">
       <li class="menu-text"><a href="{{ pathto(master_doc) }}">{{ project|e }}</a></li>
       <li class="menu-text">{{ version|e }}</li>
-      <!--<li>-->
-        <!--<a href="#">One</a>-->
-        <!--<ul class="menu vertical">-->
-          <!--<li><a href="#">One</a></li>-->
-          <!--<li><a href="#">Two</a></li>-->
-          <!--<li><a href="#">Three</a></li>-->
-        <!--</ul>-->
-      <!--</li>-->
-      <!--<li><a href="#">Two</a></li>-->
-      <!--<li><a href="#">Three</a></li>-->
+      <li>
+        <a role="button"
+           id="dTopbarSiteToc"
+           data-toggle="dropdown"
+           data-target="#"
+           href="{{ pathto(master_doc) }}"><span class="show-for-medium">&nbsp; {{ theme_topbar_site_name }} <b class="caret"> </span></b></a>
+        <ul class="menu vertical"
+            role="menu"
+            aria-labelledby="dTopbarSiteToc">{{
+            toctree(maxdepth=theme_topbar_site_depth|toint, collapse=False, includehidden=theme_topbar_site_includehidden|tobool) }}</ul>
+      </li>
     </ul>
   </div>
   {%- endblock %}

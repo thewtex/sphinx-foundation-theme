@@ -11,12 +11,26 @@
            id="dTopbarSiteToc"
            data-toggle="dropdown"
            data-target="#"
-           href="{{ pathto(master_doc) }}"><span class="show-for-medium">&nbsp; {{ theme_topbar_site_name }} <b class="caret"> </span></b></a>
-        <ul class="menu vertical"
+           href="{{ pathto(master_doc) }}">&nbsp; {{ theme_topbar_site_name }}</b></a>
+        <ul class="vertical"
             role="menu"
             aria-labelledby="dTopbarSiteToc">{{
             toctree(maxdepth=theme_topbar_site_depth|toint, collapse=False, includehidden=theme_topbar_site_includehidden|tobool) }}</ul>
       </li>
+      {%- if theme_topbar_page %}
+      {%- if display_toc %}
+      <li>
+        <a role="button"
+           id="dTopbarPageToc"
+           data-toggle="dropdown"
+           data-target="#"
+           href="#">&nbsp; {{ _(theme_topbar_page_name) }}</a>
+        <ul class="vertical"
+            role="menu"
+            aria-labelledby="dTopbarPageToc">{{ toc }}</ul>
+      </li>
+      {%- endif %}
+      {%- endif %}
     </ul>
   </div>
   {%- endblock %}

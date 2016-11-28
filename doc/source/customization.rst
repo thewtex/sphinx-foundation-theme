@@ -32,14 +32,28 @@ Topbar
 A responsive `topbar <http://foundation.zurb.com/sites/docs/top-bar.html>`_ is included
 to provide an overview and assist navigation.
 
-The topbar includes a menu to navigate the site. The name of this menu is
-*Site* by default. To change it, set the ``topbar_site_name``
+Topbar Site Navigation
+^^^^^^^^^^^^^^^^^^^^^^
+
+The topbar includes a menu to navigate the site table of contents.  The name
+of this menu is *Site* by default. To change it, set the ``topbar_site_name``
 option::
 
-  html_theme_options = { 'topbar_site_name' : 'Site Navigation' }
+  html_theme_options = { 'topbar_site_name': 'Site Navigation' }
 
 To adjust the number of levels in the topbar site menu, set the
 ``topbar_site_depth`` option. The default value, *-1*, shows all levels.
+
+Topbar Page Navigation
+^^^^^^^^^^^^^^^^^^^^^^
+
+By default, the topbar also includes a menu to navigate the page table of
+contents. To disable this menu altogether, set the ``topbar_page`` option to
+``False``.
+
+The name of the topbar page menu is *Page* by default. To change it, set the
+``topbar_page_name`` option.
+
 
 Sidebars
 --------
@@ -66,4 +80,4 @@ Sidebar Location
 To move the sidebar to the right, set the ``rightsidebar`` boolean in
 *conf.py*::
 
-  html_theme_options = { 'rightsidebar' : 'true' }
+  html_theme_options = { 'rightsidebar': True }

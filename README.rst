@@ -9,7 +9,10 @@ Sphinx Foundation Theme
     :target: https://pypi.python.org/pypi/sphinx-foundation-theme
 
 .. image:: https://img.shields.io/circleci/project/github/thewtex/sphinx-foundation-theme.svg
-    :target: https://circleci.com/gh/thewtex/sphinx-
+    :target: https://circleci.com/gh/thewtex/sphinx-foundation-theme
+
+.. image:: https://img.shields.io/github/stars/thewtex/sphinx-foundation-theme.svg?style=social&label=Star
+    :target: https://github.com/thewtex/sphinx-foundation-theme
 
 A `Sphinx <http://www.sphinx-doc.org/>`_ documentation generator theme that
 uses `Zurb <http://foundation.zurb.com/>`_

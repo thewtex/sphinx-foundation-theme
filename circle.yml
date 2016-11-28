@@ -1,0 +1,14 @@
+machine:
+  python:
+    version: 3.5.2
+
+dependencies:
+  pre:
+    - pip install --upgrade pip
+    - pip install flit
+    - pip install sphinx
+
+test:
+  override:
+    - flit wheel
+    - pip install dist/sphinx_foundation_theme*.whl

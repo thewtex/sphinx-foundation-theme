@@ -4,7 +4,9 @@ Getting Started
 Installation
 ------------
 
-.. todo:: Document how to install
+To install::
+
+  pip install sphinx-foundation-theme
 
 
 Configuration

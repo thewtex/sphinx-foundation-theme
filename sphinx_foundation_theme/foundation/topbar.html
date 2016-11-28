@@ -21,8 +21,15 @@
   {%- block topbarright %}
   <div class="top-bar-right">
     <ul class="menu">
-      <!--<li><input type="search" placeholder="Search"></li>-->
-      <!--<li><button type="button" class="button">Search</button></li>-->
+      {%- block topbarsearch %}
+        {%- if pagename != "search" %}
+        <li><form action="{{ pathto('search') }}" method="get">
+          <input type="text" name="q" class="form-control" placeholder="Search" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form></li>
+        {%- endif %}
+      {%- endblock %}
     </ul>
   </div>
   {%- endblock %}

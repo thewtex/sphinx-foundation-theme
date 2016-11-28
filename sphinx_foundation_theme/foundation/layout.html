@@ -18,7 +18,8 @@
 
 {%- macro foundationSidebar() %}
   {%- if render_sidebar %}
-  <div class="small-4 large-3 columns" id="sidebar">
+  <div class="small-4 large-3 columns" id="sidebar" data-sticky-container>
+  <div class="sticky" data-sticky data-margin-top="0">
     {%- block sidebarlogo %}
     {%- if logo %}
       <p class="logo"><a href="{{ pathto(master_doc) }}">
@@ -29,6 +30,7 @@
     {%- for sidebartemplate in sidebars %}
       {%- include sidebartemplate %}
     {%- endfor %}
+  </div>
   </div>
   {%- endif %}
 {%- endmacro %}
